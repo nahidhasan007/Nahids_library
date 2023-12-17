@@ -9,8 +9,6 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
-import com.example.demo_library.NahidLib
 import com.example.demolibrary.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -26,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
 
-        NahidLib.showToast(this, "Hello first library")
+
 
 
         val navController = findNavController(R.id.nav_host_fragment_content_main)
