@@ -44,15 +44,25 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
-afterEvaluate {
-    publishing {
-        publications {
-            create<MavenPublication>("release") {
-                from(components["release"])
+publishing {
+    publications {
+        create<MavenPublication>("demo_library") {  // looks like the name `test-didactic-googles` can be anything.
+            run {
+                groupId = "com.example"
+                artifactId = "demo_library"
+                version = "1.0.0"
+                artifact("C:\\Users\\USER.ST-SHAFAYAT\\demo\\demo-library\\build\\outputs\\aar\\demo_library-release.aar")
+            }
+        }
+    }
 
-                groupId = "com.github.nahidhasan007"
-                artifactId = "nahid_demo_library"
-                version = "1.0"
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/nahidhasan007/Nahids_library")
+            credentials {
+                username = "nahidhasan007"//githubProperties.get("gpr.usr") as String? ?: System.getenv("GPR_USER")
+                password = "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"//githubProperties.get("gpr.key") as String? ?: System.getenv("GPR_API_KEY")
             }
         }
     }
