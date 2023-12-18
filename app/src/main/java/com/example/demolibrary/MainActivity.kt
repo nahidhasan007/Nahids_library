@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
 
-        NahidLib.showToast(this, "Hello i am nahid")
+        NahidLib.showToast(this, "Working fine!")
 
 
         val navController = findNavController(R.id.nav_host_fragment_content_main)

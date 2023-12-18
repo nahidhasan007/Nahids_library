@@ -46,12 +46,12 @@ dependencies {
 }
 publishing {
     publications {
-        create<MavenPublication>("demo_library") {  // looks like the name `test-didactic-googles` can be anything.
+        create<MavenPublication>("demo-library") {  // looks like the name `test-didactic-googles` can be anything.
             run {
                 groupId = "com.example"
-                artifactId = "demo_library"
+                artifactId = "demo-library"
                 version = "1.0.0"
-                artifact("C:\\Users\\USER.ST-SHAFAYAT\\demo\\demo-library\\build\\outputs\\aar\\demo_library-release.aar")
+                artifact("$buildDir/outputs/aar/${artifactId}-release.aar")
             }
         }
     }
@@ -62,7 +62,7 @@ publishing {
             url = uri("https://maven.pkg.github.com/nahidhasan007/Nahids_library")
             credentials {
                 username = "nahidhasan007"//githubProperties.get("gpr.usr") as String? ?: System.getenv("GPR_USER")
-                password = "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"//githubProperties.get("gpr.key") as String? ?: System.getenv("GPR_API_KEY")
+                password = "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"//githubProperties.get("gpr.key") as String? ?: System.getenv("GPR_API_KEY")
             }
         }
     }

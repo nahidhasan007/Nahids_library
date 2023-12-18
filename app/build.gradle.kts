@@ -52,6 +52,7 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.7.6")
     implementation("org.testng:testng:6.9.6")
     implementation("com.google.guava:guava:27.0.1-android")
-    implementation(project(mapOf("path" to ":demo-library")))
+    implementation("com.example:demo-library:1.0.0")
+//    implementation(project(mapOf("path" to ":demo-library")))
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
