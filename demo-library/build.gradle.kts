@@ -66,7 +66,7 @@ publishing {
                 username =
                     "nahidhasan007"//githubProperties.get("gpr.usr") as String? ?: System.getenv("GPR_USER")
                 password =
-                    "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"//githubProperties.get("gpr.key") as String? ?: System.getenv("GPR_API_KEY")
+                    "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"//githubProperties.get("gpr.key") as String? ?: System.getenv("GPR_API_KEY")
             }
         }
     }
