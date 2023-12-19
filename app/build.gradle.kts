@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "com.example.demolibrary"
-    compileSdk = 34
+    compileSdk = 33
 
     defaultConfig {
         applicationId = "com.example.demolibrary"
-        minSdk = 24
-        targetSdk = 34
+        minSdk = 21
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 
@@ -44,12 +44,12 @@ android {
 
 dependencies {
 
-    implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.8.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("androidx.navigation:navigation-fragment-ktx:2.7.6")
-    implementation("androidx.navigation:navigation-ui-ktx:2.7.6")
+    implementation("androidx.core:core-ktx:1.3.2")
+    implementation("androidx.appcompat:appcompat:1.2.0")
+    implementation("com.google.android.material:material:1.5.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.0")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.3.5")
+    implementation("androidx.navigation:navigation-ui-ktx:2.3.5")
     implementation("org.testng:testng:6.9.6")
     implementation("com.google.guava:guava:27.0.1-android")
     implementation(project(mapOf("path" to ":demo-library")))
