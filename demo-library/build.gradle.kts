@@ -1,8 +1,16 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
     id("maven-publish")
 }
+
+// github packages start
+val githubProperties = Properties()
+githubProperties.load(FileInputStream(rootProject.file("github.properties")))
+
 
 android {
     namespace = "com.example.demo_library"
@@ -52,7 +60,7 @@ publishing {
             run {
                 groupId = "com.example"
                 artifactId = "demo-library"
-                version = "1.0.1"
+                version = "1.0.2"
                 artifact("$buildDir/outputs/aar/${artifactId}-release.aar")
             }
         }
@@ -64,9 +72,9 @@ publishing {
             url = uri("https://maven.pkg.github.com/nahidhasan007/Nahids_library")
             credentials {
                 username =
-                    "nahidhasan007"//githubProperties.get("gpr.usr") as String? ?: System.getenv("GPR_USER")
+                    githubProperties.get("gpr.usr") as String? ?: System.getenv("GPR_USER")
                 password =
-                    "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"//githubProperties.get("gpr.key") as String? ?: System.getenv("GPR_API_KEY")
+                    githubProperties.get("gpr.key") as String? ?: System.getenv("GPR_API_KEY")
             }
         }
     }
