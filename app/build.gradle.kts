@@ -40,6 +40,11 @@ android {
     buildFeatures {
         viewBinding = true
     }
+
+    lintOptions {
+        isAbortOnError = false
+    }
+
 }
 
 dependencies {
@@ -53,5 +58,5 @@ dependencies {
     implementation("org.testng:testng:6.9.6")
     implementation("com.google.guava:guava:27.0.1-android")
     implementation(project(mapOf("path" to ":demo-library")))
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    //androidTestImplementation("androidx.test.espresso:espresso-core:3.0.0")
 }

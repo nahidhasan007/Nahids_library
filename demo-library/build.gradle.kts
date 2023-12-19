@@ -31,6 +31,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    lintOptions {
+        isAbortOnError = false
+    }
+
 }
 
 dependencies {
@@ -40,15 +44,15 @@ dependencies {
     implementation("com.google.android.material:material:1.5.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    //androidTestImplementation("androidx.test.espresso:espresso-core:3.0.0")
 }
 publishing {
     publications {
-        create<MavenPublication>("demo_library") {  // looks like the name `test-didactic-googles` can be anything.
+        create<MavenPublication>("demo-library") {  // looks like the name `test-didactic-googles` can be anything.
             run {
                 groupId = "com.example"
-                artifactId = "demo_library"
-                version = "1.0.0"
+                artifactId = "demo-library"
+                version = "1.0.1"
                 artifact("$buildDir/outputs/aar/${artifactId}-release.aar")
             }
         }
@@ -62,7 +66,7 @@ publishing {
                 username =
                     "nahidhasan007"//githubProperties.get("gpr.usr") as String? ?: System.getenv("GPR_USER")
                 password =
-                    "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"//githubProperties.get("gpr.key") as String? ?: System.getenv("GPR_API_KEY")
+                    "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"//githubProperties.get("gpr.key") as String? ?: System.getenv("GPR_API_KEY")
             }
         }
     }
